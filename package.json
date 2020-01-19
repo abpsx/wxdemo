@@ -1,0 +1,71 @@
+{
+  "name": "wxdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "config": {
+    "arch": "ia32"
+  },
+  "webkit": {
+    "plugin": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abpsx/wxdemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "rebuild": "cd ./node_modules/.bin && electron-rebuild --force --module-dir=../../",
+    "start": "cross-env chcp 65001 && cross-env NODE_ENV=DEV electron .",
+    "pro": "cross-env vue-cli-service build && cross-env electron ."
+  },
+  "dependencies": {
+    "core-js": "^3.4.4",
+    "cross-env": "^6.0.3",
+    "electron": "^4.0.3",
+    "electron-rebuild": "^1.8.8",
+    "ffi": "^2.3.0",
+    "ref": "^1.3.5",
+    "ref-array": "^1.2.0",
+    "ref-struct": "^1.1.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-router": "^4.1.2",
+    "@vue/cli-service": "^4.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "bugs": {
+    "url": "https://github.com/abpsx/wxdemo/issues"
+  },
+  "homepage": "https://github.com/abpsx/wxdemo#readme"
+}
