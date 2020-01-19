@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === "DEV") {
   url = `file://${process.cwd()}/dist/index.html`;
 }
 global.sharedObject = {
-  someProperty: "default value"
+  someProperty: "我是全局数据 通过渲染进程getWebMsg() 获取 demo04"
 };
 function createWindow() {
   win = new BrowserWindow({
@@ -28,6 +28,9 @@ function createWindow() {
     win = null;
   });
 }
+
+app.setAppUserModelId(process.execPath);
+
 app.on("ready", createWindow);
 
 app.on("window-all-closed", () => {
